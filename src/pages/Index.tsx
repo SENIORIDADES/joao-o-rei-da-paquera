@@ -7,10 +7,14 @@ import { Testimonials } from '../components/Testimonials';
 import { Gallery } from '../components/Gallery';
 import { Footer } from '../components/Footer';
 
+console.log('Index.tsx loaded');
+
 const Index = () => {
+  console.log('Index component rendering');
   const [currentSection, setCurrentSection] = useState('hero');
 
   useEffect(() => {
+    console.log('Index useEffect running');
     const handleScroll = () => {
       const sections = ['hero', 'about', 'achievements', 'testimonials', 'gallery'];
       const scrollPosition = window.scrollY + 100;
@@ -41,6 +45,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      {console.log('Index JSX rendering')}
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
